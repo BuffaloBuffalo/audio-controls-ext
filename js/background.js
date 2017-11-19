@@ -51,19 +51,16 @@ chrome.runtime.onUpdateAvailable.addListener(function (details) {
 
 
 // Receiving message from a content-script
-/*
  chrome.extension.onMessage.addListener(function (request, sender, sendResponse) {
- if (request.msg === "I'm content-script") {
- sendResponse({answer: "OK! I'm background_page"});
+   if (request.msg === "I'm content-script") {
+     sendResponse({answer: "OK! I'm background_page"});
  }
  });
- */
+
 
 // Sending a request to a content script. You need to specify which tab to send it to. Like this:
-/*
  chrome.tabs.getSelected(null, function (tab) {
- chrome.tabs.sendMessage(tab.id, {msg: "Do you hear me?"}, function (response) {
- console.log(response);
+   chrome.tabs.sendMessage(tab.id, {msg: "Do you hear me?"}, function (response) {
+   co nsole.log(response);
+   });
  });
- });
- */
